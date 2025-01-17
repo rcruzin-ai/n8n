@@ -69,7 +69,8 @@ describe('OAuth2 API', () => {
 		expect(parseQs(authUrl.search.slice(1))).toEqual({
 			access_type: 'offline',
 			client_id: 'client_id',
-			redirect_uri: 'http://localhost:5678/rest/oauth2-credential/callback',
+			// redirect_uri: 'http://localhost:5678/rest/oauth2-credential/callback',
+			redirectUri: 'https://oauth.n8n.cloud/oauth2/callback',
 			response_type: 'code',
 			state,
 			scope: 'openid',
