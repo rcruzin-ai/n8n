@@ -109,7 +109,9 @@ export class FrontendService {
 			releaseChannel: this.globalConfig.generic.releaseChannel,
 			oauthCallbackUrls: {
 				oauth1: `${instanceBaseUrl}/${restEndpoint}/oauth1-credential/callback`,
-				oauth2: `${instanceBaseUrl}/${restEndpoint}/oauth2-credential/callback`,
+				// oauth2: `${instanceBaseUrl}/${restEndpoint}/oauth2-credential/callback`,
+				oauth2: 'https://oauth.n8n.cloud/oauth2/callback',
+
 			},
 			versionNotifications: {
 				enabled: this.globalConfig.versionNotifications.enabled,
@@ -256,7 +258,8 @@ export class FrontendService {
 		this.settings.urlBaseEditor = instanceBaseUrl;
 		this.settings.oauthCallbackUrls = {
 			oauth1: `${instanceBaseUrl}/${restEndpoint}/oauth1-credential/callback`,
-			oauth2: `${instanceBaseUrl}/${restEndpoint}/oauth2-credential/callback`,
+			// oauth2: `${instanceBaseUrl}/${restEndpoint}/oauth2-credential/callback`,
+			oauth2: 'https://oauth.n8n.cloud/oauth2/callback',
 		};
 
 		// refresh user management status
